@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div id="success">
+      <div>
+        <img src="./assets/images/icon-success-check.svg" alt="icon success" />
+        <h4>Message Sent!</h4>
+      </div>
+      <p>Thanks for completing the form. We will be in touch soon.</p>
+    </div>
+    <main>
+      <header>
+        <h2>Contact Us</h2>
+      </header>
+      <form action="#">
+        <fieldset class="fied-name">
+          <label for="first-name">
+            <p>First Name *</p>
+            <input type="text" id="first-name" class="name" required />
+            <p id="first-name-error" class="error"></p>
+          </label>
+          <label for="first-name">
+            <p>Last Name *</p>
+            <input type="text" id="last-name" class="name" required />
+            <p id="last-name-error" class="error"></p>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label for="email-address"
+            ><p>Email Address *</p>
+            <input type="email" id="email-address" required />
+            <p id="email-error" class="error"></p>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label class="query-type">Query Type *</label>
+          <div class="general-request">
+            <label for="general-enquiry" class="query-child">
+              <input
+                type="radio"
+                id="general-enquiry"
+                class="radio-input"
+                name="value"
+                value="1"
+                required
+              />
+              <div class="radio">
+                <img
+                  src="./assets/images/icon-radio-selected.svg"
+                  alt="radio icon"
+                  class="hidden"
+                />
+              </div>
+              <p>General Enquiry</p></label
+            >
+            <label for="support-request" class="query-child">
+              <input
+                type="radio"
+                id="support-request"
+                class="radio-input"
+                name="value"
+                value="2"
+                required
+              />
+              <div class="radio">
+                <img
+                  src="./assets/images/icon-radio-selected.svg"
+                  alt="radio icon"
+                  class="hidden"
+                />
+              </div>
+              <p>Support Request</p></label
+            >
+          </div>
+          <p id="querry-error" class="error"></p>
+        </fieldset>
+
+        <fieldset class="field-message">
+          <label for="message">Message *</label>
+          <textarea name="Message" id="message" rows="15" required></textarea>
+          <p id="textarea-error" class="error"></p>
+        </fieldset>
+
+        <fieldset class="field-checkbox">
+          <input type="checkbox" id="check" required />
+          <div class="checkbox">
+            <img
+              src="./assets/images/icon-checkbox-check.svg"
+              alt="icon checkbox"
+              class="opacity"
+            />
+          </div>
+          <label for="check"> I consent to being contacted by the team</label>
+        </fieldset>
+
+        <p id="final-error" class="error"></p>
+
+        <fieldset class="field-submit">
+          <input type="submit" id="submit-btn" />
+        </fieldset>
+      </form>
+    </main>
+  </body>
+  <script src="./jquery.js" type="text/javascript"></script>
+  <script src="./script.js" type="text/javascript"></script>
+</html>
