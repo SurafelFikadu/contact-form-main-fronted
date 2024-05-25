@@ -11,6 +11,8 @@ $("document").ready (function () {
         padding: "1rem",
         borderRadius: "7px",
         display: "none",
+        position: "absolute",
+        zIndex: "100"
     })
 
     $(".error").css("color", "red")
@@ -65,6 +67,19 @@ $("document").ready (function () {
             }, 3000);
         }
 
+        if (firstName.value != ""
+        && lastName.value != ""
+        && emailValid.test(email.value)
+        && (querryTypeGeneral.checked || querryTypeSupport.checked)
+        && message.value !== ""
+        && check.checked
+        ) {
+            $('#success').css("display", "block");
+            setTimeout(() => {
+                $('#success').css("display", "none");
+            }, 5000);
+        }
+        
     })
 
     const firstName = document.getElementById("first-name");
@@ -82,12 +97,12 @@ $("document").ready (function () {
     const finalError = document.getElementById("final-error");
     const submit = document.getElementById("submit-btn");
 
-    $("#submit-btn").click(() => {
-        if($("#submit-btn").submit() === true) {
-            $('#success').css("display", "block");
-            setTimeout(() => {
-                $('#success').css("display", "none");
-            }, 5000);
-        }
-    })
+    // $("#submit-btn").click(() => {
+    //     if($("#submit-btn").submit() === true) {
+    //         $('#success').css("display", "block");
+    //         setTimeout(() => {
+    //             $('#success').css("display", "none");
+    //         }, 5000);
+    //     }
+    // })
 })

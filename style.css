@@ -16,6 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    position: relative;
 }
 
 main {
@@ -132,7 +133,7 @@ textarea {
 }
 
 [type="checkbox"]:checked+.checkbox img {
-    opacity: 1;
+    display: block;
 }
 
 .field-submit {
@@ -160,7 +161,7 @@ textarea {
 }
 
 .opacity {
-    opacity: 0;
+    display: none;
 }
 
 @media (min-width: 700px) {
